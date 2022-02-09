@@ -1,5 +1,8 @@
 /* all pages */
-
+body {
+  background: #080b0b;
+  color: rgb(112, 112, 112);
+}
 footer {
   margin: 20px;
   font-size: 12px;
@@ -11,6 +14,7 @@ footer {
     top: 50px; 
     right: 0; 
     z-index:0;
+    background: red;
 }
 
 .shop-button {
@@ -66,7 +70,7 @@ footer {
   margin-top:20px;
   list-style: none; 
   padding-left: 5px; 
-  font-size: 15px"
+  font-size: 15px;
 }
 
 .product_row  .product-properties  li {
@@ -74,3 +78,20 @@ footer {
   float: left;
 }
 
+.bg-light{
+  background-color: black !important;
+  border-bottom: 1px solid lime;
+}
+
+#index {
+  padding-top: 30px;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.kart {
+  color: white;
+  width: 30px;
+}
