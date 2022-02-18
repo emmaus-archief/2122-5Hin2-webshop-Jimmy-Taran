@@ -28,17 +28,11 @@ footer {
 
 .card {
   width:200px; 
-  height: 700px; 
+  height: 600px; 
   margin-bottom: 20px
 }
 
-.card-header {
-  height: 5em;
-}
 
-.card-text {
-  min-height:10em
-}
 
 /* index page */
 .product{
@@ -48,13 +42,18 @@ footer {
   margin-top: 20px;
 }
 
+
+.container {
+  max-width: 75%;
+}
+
 .product img {
   margin: auto;
   margin-top: 20px;
 }
 
 .product > .card-header {
-  height:3em
+  height: 3em
 }
 
 .product-properties > li > .property-name {
@@ -101,12 +100,56 @@ footer {
 }
 
 .col-sm {
+  
   padding-left: 0px;
-    padding: 20px;
 }
 
 .card {
-  background: #4040400d;
+  background: transparent;
   width: 400px;
   border-bottom: 3px solid green;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: white;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-body {
+padding: 0;
+  background: #060606;
+}
+
+.card-header {
+  text-align: left;
+  color: white;
+  background-color: none;
+}
+
+.product_description {
+  padding: 20px;
+  color: #5c5c5c;
+}
+
+.product-properties {
+  display: none;
+}
+
+#learnmore {
+  color: lime;
+  padding-left: 20px;
+  transition: all 0.3s
+}
+
+#learnmore:hover {
+  cursor: pointer;
+  color: green;
+  transition: all 0.3s
+}
+
+.product_image  {
+  background: black;
 }
