@@ -95,3 +95,18 @@ footer {
   color: white;
   width: 30px;
 }
+
+#slangy {
+  width: 100px;
+}
+
+.col-sm {
+  padding-left: 0px;
+    padding: 20px;
+}
+
+.card {
+  background: #4040400d;
+  width: 400px;
+  border-bottom: 3px solid green;
+}
