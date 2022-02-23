@@ -153,3 +153,7 @@ padding: 0;
 .product_image  {
   background: black;
 }
+
+#totalcolor {
+  color: white;
+}
