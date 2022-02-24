@@ -140,6 +140,15 @@ padding: 0;
 }
 
 .product-properties {
+  display: block;
+  margin-top: 0px;
+  padding-left: 20px;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+.hidethis {
   display: none;
 }
 #learnmore {
@@ -248,3 +257,12 @@ a {
     input:focus, textarea:focus, select:focus{
         outline: none;
     }
+
+#hstyling {
+  padding-bottom: 0px;
+}
+
+.product_price {
+  font-size: 20px;
+  color: lime;
+}
