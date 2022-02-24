@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <div class="toast" data-delay="2000">
+    <div class="toast" data-delay="9000">
       <div class="toast-header">
         <strong class="mr-auto">Product toegevoegd</strong>
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
@@ -41,24 +41,23 @@
     <!-- template for product info-->
         <template id="productcard">
 
-      <div class="col-sm">
-        <div style="display: flex; justify-content: space-beteen;">
-          <h5 syle="display: inline-block"><a href="/index.html">Artikelen</a>&nbsp;&gt;&nbsp;</h5><h5 class="product_title"></h5>
-        </div>
-        <div class="card product">
-          <h5 class="card-header product_title"></h5>
-          <img width="200" class="product_image">
-          <div class="card-body">
+      <div class="productcontainer">
+          <img width="1200" class="product_image">
+                  <div class="product-body">
+            <h5 class="card-header product_title"></h5>
             <p class="product_description card-text"></p>
             <ul class="product-properties">
             <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
             <li><span class="propert-name">Code:</span><span class="product_code"></span></li>
             </ul>
+                    <div class="frogbox">
+                                              <button class="btn btn-outline-dark shop-button" onclick="event.stopPropagation();addAmountClosestToBasket(this);$('.toast').toast('show')">TOEVOEGEN AAN WINKELWAGEN</button>
+            
             <input class="product_amount" type="number" value="1" min="1">
             <input class="product_id" type="hidden" name="id" data-json="">
-            <button class="btn btn-outline-dark shop-button" onclick="event.stopPropagation();addAmountClosestToBasket(this);$('.toast').toast('show')">🛒</button>
+                    </div>
+
           </div>
-        </div>
       </div>
     </template> 
     <script src="/js/basket.js"></script>

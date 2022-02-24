@@ -1,4 +1,6 @@
 /* all pages */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 body {
   background: #080b0b;
   color: rgb(112, 112, 112);
@@ -8,13 +10,24 @@ footer {
   font-size: 12px;
 } 
 
+.container {
+  max-width: 75%;
+}
+
 .toast {
     /* dirty: below 'card' button  */
     position: fixed; 
-    top: 50px; 
+    top: 90px; 
     right: 0; 
     z-index:0;
-    background: red;
+    background: #060606;
+  color: white;
+  margin-right: 15px;
+}
+
+.toast-header {
+  color: white;
+  background: green;
 }
 
 .shop-button {
@@ -42,14 +55,8 @@ footer {
   margin-top: 20px;
 }
 
-
-.container {
-  max-width: 75%;
-}
-
 .product img {
   margin: auto;
-  margin-top: 20px;
 }
 
 .product > .card-header {
@@ -80,10 +87,6 @@ footer {
 .bg-light{
   background-color: black !important;
   border-bottom: 1px solid lime;
-}
-
-#index {
-  padding-top: 30px;
 }
 
 .navbar-brand {
@@ -123,6 +126,8 @@ padding: 0;
   background: #060606;
 }
 
+
+
 .card-header {
   text-align: left;
   color: white;
@@ -137,7 +142,6 @@ padding: 0;
 .product-properties {
   display: none;
 }
-
 #learnmore {
   color: lime;
   padding-left: 20px;
@@ -157,3 +161,90 @@ padding: 0;
 #totalcolor {
   color: white;
 }
+
+.toast.show {
+  border: none;
+}
+
+.toast-header {
+  border: none;
+  color: white;
+  background: #060606;
+}
+
+.toast-body {
+  border-bottom: 2px solid green;
+  color: #f2f2f2
+}
+
+a {
+  color: #47ff3d;
+}
+
+.mr-auto {
+  color: #47ff3d;
+}
+
+
+.ml-2 .mb-1 .close {
+  color: white;
+}
+
+.product_amount {
+  text-align: center;
+  width: 40px;
+  background: #060606;
+  color: white;
+  margin-left: 10px;
+  height: 40px;
+  border: 1px solid #131313;
+}
+
+.shop-button {
+  margin-bottom: 10px;
+}
+
+.indexstyling {
+  margin-top: 30px;
+}
+
+#productstyling {
+  margin-top: 0;
+}
+
+.productcontainer {
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.product-body {
+  padding: 90px;
+   background: #060606;
+}
+
+.btn-outline-dark {
+  border: none;
+  background: #44d62c;
+  transition: background 0.5s;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: black;
+}
+
+.btn-outline-dark:hover {
+  background: #5ddf49;
+    color: black;
+  font-weight: bold;
+  transition: background 0.5s;
+}
+
+.frogbox{
+  display: flex;
+  margin: 20px;
+}
+
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
