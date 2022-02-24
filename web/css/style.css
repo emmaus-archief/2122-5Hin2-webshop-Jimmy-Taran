@@ -10,9 +10,6 @@ footer {
   font-size: 12px;
 } 
 
-.container {
-  max-width: 75%;
-}
 
 .toast {
     /* dirty: below 'card' button  */
@@ -32,11 +29,13 @@ footer {
 
 .shop-button {
   font-size: 15px;
-  margin-top: -4px;
 }
 
 .article-container {
-  margin: auto;
+ 
+  margin: 0 auto;
+margin-top: 5%;
+  
 }
 
 .card {
@@ -68,7 +67,8 @@ footer {
   width: 50px;
 }
 .product_amount {
-  width: 80px
+  width: 80px;
+  margin-bottom: 10px;
 }
 
 /* basket page */
@@ -222,14 +222,12 @@ a {
 }
 
 .productcontainer {
-  max-width: 70%;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
 
 .product-body {
-  padding: 90px;
+  padding: 20px;
    background: #060606;
 }
 
