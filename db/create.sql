@@ -43,9 +43,9 @@ CREATE TABLE products (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ORNATA V2', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 1);
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY CYNOSA V2', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 1);
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TARTARUS', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2);
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ORNATA V2', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 2, 1, 2, 1);
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY CYNOSA V2', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 2, 1, 2, 2);
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TARTARUS', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
 
   
 
@@ -62,4 +62,4 @@ insert into deliverytimes (delivery) values ('1 month');
   
 insert into stock (stockinfo) values ('Out of stock.');
 insert into stock (stockinfo) values ('Limited amount left');
-  insert into stock (stockinfo) values ('Available');
+insert into stock (stockinfo) values ('Available');
