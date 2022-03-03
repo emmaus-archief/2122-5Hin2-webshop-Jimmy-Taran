@@ -142,4 +142,3 @@ function updateBasket(basket){
   document.addEventListener("itemInserted", localStorageSetHandler, false);
 
 })();
-

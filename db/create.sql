@@ -44,11 +44,25 @@ CREATE TABLE products (
 --
 
 insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ORNATA V2', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 2, 1, 2, 1);
+  
 insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY CYNOSA V2', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 2, 1, 2, 2);
+  
 insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TARTARUS', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
 
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY VIPER V1', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 2, 1, 2, 1);
   
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ADDER', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 2, 1, 2, 2);
+  
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TITANOBOA', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
 
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY MAMBA', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 2, 1, 2, 1);
+  
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY COBRA', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 2, 1, 2, 2);
+  
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TAIPAN', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
+  
+insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY KRAIT', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
+  
 insert into colors (color) values ('MATTE BLACK');
 insert into colors (color) values ('GLOSS BLACK');
 

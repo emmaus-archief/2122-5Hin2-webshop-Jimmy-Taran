@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@500;600&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background: #080b0b; /* fallback for old browsers */
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(180, 180, 180); 
+    border-radius: 10px;
+  }
+
+
+::selection {
+    background-color: #3d3d3d;
+}
+
+h1, h4 {
+    font-family: 'Poppins';
+    margin: 0;
+    font-weight: 500;
+}
+
+h1 {
+    padding-top: 40px;
+    font-weight: 600;
+    font-size: 30px;
+    color: #47ff3d;
+    
+}
+
+
+.header {
+    max-width: 70%;
+    margin: 0 auto;
+  margin-top: 10%;
+    margin-bottom: 3rem;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding-top: 0;
+}
+
+
+.fontstyling {
+    font-weight: 500;
+    font-size: 10px;
+    
+    color: white;
+}
+
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+
+
+.welcome {
+    width: 600px;
+    margin-top: 50px;
+}
+
+.welcomefont {
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+    color: rgb(120 255 103);
+}
+
+.paragraphstyling {
+    padding: 0;
+    padding-left: 5px;
+    margin-top: 2rem;
+    width: 400px;
+    color: rgb(104 104 104);
+    font-family: 'Montserrat';
+    background: rgb(18 18 18 / 82%);
+    transition: all 0.3s;
+    margin-bottom: 5rem;
+    border-radius: 2px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.btn {
+    font-family: 'Montserrat';
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: rgb(4 187 77);
+    border-bottom: 3px solid rgb(3 104 30);
+    border-radius: 4px;
+    margin-top: 0px;
+    text-decoration: none;
+    text-decoration-style: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(40 193 101);
+    border-bottom: 3px solid rgb(29 122 54);
+    transition: all 0.3s;
+  color: white;
+}
+
+.paragraphstyling:hover {
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+    
+}
+
+#headernft {
+    box-shadow: 0px 20px 52px 0px rgb(0 0 0 / 18%);
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 5px;
+}
+
+.left {
+    margin-left: 10px;
+}
+
+.rowflex {
+    display: flex;
+}
+
+.keyboards {
+    display: flex;
+    margin-left: 10%;
+}
+
+.rect
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 52px 0px rgb(0 0 0 / 18%);
+  transition: all 0.5s;
+}
+.rect2
+{
+  position: absolute;
+  top: 50px;
+  height: 300px;
+  left: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 52px 0px rgb(0 0 0 / 18%);
+  transition: all 0.5s;
+}
+
+.rect3
+{
+  position: absolute;
+  top: 200px;
+  height: 200px;
+  left: 90px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 52px 0px rgb(0 0 0 / 18%);
+  transition: all 0.5s;
+}
+
+
+.rect2:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.rect3:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.rect:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+
+@media screen and (max-width: 880px) {
+    .keyboards {
+        display: none;
+    }
+
+    .paragraphstyling {
+        width: 80%;
+  }
+
+}
+

@@ -32,10 +32,12 @@ footer {
 }
 
 .article-container {
- 
-  margin: 0 auto;
-margin-top: 5%;
-  
+
+  max-width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -103,13 +105,14 @@ margin-top: 5%;
 }
 
 .col-sm {
-  
+  flex-grow: 0;
   padding-left: 0px;
 }
 
 .card {
   background: transparent;
   width: 400px;
+  
   border-bottom: 3px solid green;
 }
 
@@ -263,4 +266,10 @@ a {
 .product_price {
   font-size: 20px;
   color: lime;
+}
+
+.form-control {
+  border: 2px solid #30ff3094;
+  background: #141a1a;
+  width: 300px;
 }

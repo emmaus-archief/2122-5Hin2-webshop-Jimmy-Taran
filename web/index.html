@@ -5,49 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	 crossorigin="anonymous">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/jimmy.css">
 </head>
 
-<body>
 
-  <!-- menubalk -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#"><img id="slangy" src="https://i.ibb.co/VNcLdSP/Untitled-Artwork.jpg"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <body>
+        <div class="header">
+                
+                <h1>Slangy</h1>
+            <div class="rowflex">
+                <div class="welcome">
+                    <!-- You can change this -->
+                    <span class="welcomefont" id="shadowfont">Find Your</span><br>
+                    <!-- and this -->
+                    <span class="welcomefont">Keyboard Today!</span>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="/artikelen.html">Artikelen <span class="sr-only">(current)</span></a>
-				</li>
-			</ul>
-			<a
-				href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img class="kart" src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-shopping-cart-interface-kiranshastry-lineal-kiranshastry-1.png"/> <span class="num_products"></span></button></a>
-		</div>
-	</nav>
+                    <!-- Change the paragraph text to whatever you like -->
+                    <p class="paragraphstyling">Slangy was designed by Jimmy & Taran, 2 entrepeneurs located in Rotterdam. We use high quality material to make sure every touch and click is smooth.</p>
+    
+                    <a class="btn" href="/artikelen.html">Explore Keyboards</a>
+                </div>
+                
+                    <div class="keyboards" style="position: relative; left: 0; top: 0;">
+                        <img class="rect" src="./images/rect1.jpg"/>
+                        <img class="rect2" src="./images/rect2.jpg"/>
+                        <img class="rect3" src="./images/rect3.jpg"/>
+                    </div>
 
-  <!-- lijst met producten, wordt gevuld door javascript -->
-	<main id="index" class="indexstyling">
-		<div class="container">
-			<h5>Artikelen</h5>
-			<p>Hier zie je een lijst met artikelen die je bij mij kunt bestellen.</p>
-			<p>klik op een artikel voor meer informatie<p>
-					<p>klik op de "winkelwagentje" om het artikel in je winkelwagen te stoppen</p>
-		</div>	
-    <!-- template for product info-->
-	</main>
+            </div>
 
-  <!-- voettekst -->
-	<footer>
-		<hr>
-      <p>Het maken van deze website is een opdracht voor het vak informatica op het Emmauscollege Rotterdam.</p>
-	</footer>
+        </div>
 
-	<script src="/js/basket.js"></script> <!-- functies voor de winkelwagen -->
-	
-
-</body>
+    </body>
 
 </html>
