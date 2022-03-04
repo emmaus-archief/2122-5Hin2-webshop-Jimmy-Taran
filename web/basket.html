@@ -16,7 +16,11 @@
         <div class="rowflex">
                 <div class="welcome">
                     <span class="welcomefont" id="shadowfont">Checkout</span><br>
-                  
+          <div id="show_when_empty_basket">
+          <div class="alert alert-info" > 
+            Je winkelwagen is leeg. 
+          </div>
+          </div>          
         <div id="index">
           
           <template id="productrow">
@@ -127,7 +131,9 @@
           </div> 
     </div>
   </div>
-          <button type="button" class="btn btn-outline-success shop-button" onclick="checkout()">Bestellen</button>
+          <button type="button" id="bestellen" class="btn btn-outline-success shop-button" onclick="checkout()">Bestellen</button>
+               <button type="button" id="winkelwagenlegen" class="btn btn-outline-success shop-button" onclick="if(confirm('Winkelwagen legen?')) { emptyBasket(); location.href='basket.html' }">Winkelwagen Legen</button>
+       <a class="btn btn-outline-success shop-button" href="/"">Verder Winkelen</a>
         </form>
   </div>
             </div>
@@ -135,7 +141,19 @@
         </div>
  <script src="/js/basket.js"></script>
     <script> // script to show basket when page is loaded
-
+            function setIfEmptyMsg() {
+          const basket = readBasket()
+          var numkeys = Object.keys(basket).length
+          if(numkeys == 0) {
+            document.querySelector('#show_when_empty_basket').style.display = "block"
+            document.querySelector('#bestellen').style.display = "none"
+            document.querySelector('#winkelwagenlegen').style.display = "none"
+          }else{
+            document.querySelector('#show_when_empty_basket').style.display = "none"
+            document.querySelector('#bestellen').style.display = "inline-block"
+            document.querySelector('#winkelwagenlegen').style.display = "inline-block"
+          }
+        }
 
       // deze functie wordt aangeroepen als de webpagina is geladen en
       // toont de inhoud van de winkelwagen 
@@ -169,11 +187,12 @@
         total.textContent = basketTotalPrice().toFixed(2)
         
         // voeg toe aan webpagina dat winkelmand leeg is als winkelmand leeg is
-
+setIfEmptyMsg()
       })();
     </script>
     
-    <script> // script to order when submit-button is pressed
+    <script>
+ // script to order when submit-button is pressed
     var formElement = document.querySelector('#orderForm')
 
     // translate all data in the form into a string that can be sent to the API 

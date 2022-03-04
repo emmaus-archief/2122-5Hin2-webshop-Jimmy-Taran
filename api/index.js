@@ -155,8 +155,8 @@ function checkoutOrder(request, response) {
 
   // lees informatie die is meegestuurd naar api via POST-request
   var { name, adres, postcode, plaats, email, phone, productIds, productAmounts } = request.body
-  console.log("data ontvangen via post-request:")
-  console.log(request.body)
+  //console.log("data ontvangen via post-request:")
+  //console.log(request.body)
 
   // define productIds and ProductAmounts as array 
   // if there are 0 or 1 products this code is needed
@@ -199,12 +199,12 @@ function checkoutOrder(request, response) {
     articleTable +
     //`productIds: ${productIds || '-'}<br>\n` + 
     //`productAmounts: ${productAmounts || '-'}<br>\n` + 
-    `groet,<br><br>\n\nShop Mailer\n</body></html>`
+    `Groetjes,<br><br>\n\nSlangy\n</body></html>`
 
 
   // check mailconfig en verstuur mail
   if (mailConfigOK()) {
-    sendMail('Bevestiging van bestelling', body, email)
+    sendMail('Orderbevestiging | Slangy', body, email)
     // note: mailer is async, so technically it has not been send yet 
     // if an error occurs during sending of the mail, 
     // the user gets an okee, but the error is dumped in console.log
@@ -265,6 +265,7 @@ function sendMail(subject, body, recipent) {
 
   // verstuur mail
   transporter.sendMail(mailOptions, function (error, info) {
+    
     if (error) {
       console.log(error);
     } else {

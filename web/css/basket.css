@@ -65,6 +65,7 @@ p {
     max-width: 70%;
     margin: 0 auto;
   margin-left: 0px;
+  padding-left: 0;
 }
 
 
@@ -261,6 +262,12 @@ dl, ol, ul {
     color: white;
 }
 
+.alert-info {
+  background: rgb(18 18 18 / 82%);
+  color: rgb(104 104 104);
+  border: none;
+}
+
 .form-control:focus {
       background: #121919;
     border: 2px solid #3ce83c;
@@ -282,15 +289,13 @@ label {
 .form-flexing {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .form-flexing-1 {
   margin-right: 50px;
 }
 
-.form-flexing-2 {
-  margin-left: 50px;
-}
 
 @media screen and (max-width: 880px) {
     .keyboards {
