@@ -52,9 +52,9 @@
               <input class="product_id" name="productIds" data-json="" type="hidden">
               <!-- input field needed for checkout -->
               <input class="product_totalAmount" name="productAmounts" value="9" type="hidden">
-              <button class="btn btn-outline-dark shop-button" onClick="addAmountClosestToBasket(this, '.product_amount_show')">+</button>
-              <button class="btn btn-outline-dark shop-button" onClick="removeAmountClosestFromBasket(this, '.product_amount_show')">-</button>
-              <button class="btn btn-outline-dark shop-button" onClick="if(confirm('Verwijder product?')) { removeClosestCompletelyFromBasket(this); setIfEmptyMsg() }">🗑</button>
+              <button class="btn secundair" onClick="addAmountClosestToBasket(this, '.product_amount_show')">+</button>
+              <button class="btn secundair" onClick="removeAmountClosestFromBasket(this, '.product_amount_show')">-</button>
+              <button class="btn secundair" onClick="if(confirm('Verwijder product?')) { removeClosestCompletelyFromBasket(this); setIfEmptyMsg() }">🗑</button>
            
           </div>
           </template>
@@ -133,7 +133,7 @@
   </div>
           <button type="button" id="bestellen" class="btn btn-outline-success shop-button" onclick="checkout()">Bestellen</button>
                <button type="button" id="winkelwagenlegen" class="btn btn-outline-success shop-button" onclick="if(confirm('Winkelwagen legen?')) { emptyBasket(); location.href='basket.html' }">Winkelwagen Legen</button>
-       <a class="btn btn-outline-success shop-button" href="/"">Verder Winkelen</a>
+       <a class="btn btn-outline-success shop-button" href="/artikelen.html"">Verder Winkelen</a>
         </form>
   </div>
             </div>

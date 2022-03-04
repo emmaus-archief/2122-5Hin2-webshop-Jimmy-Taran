@@ -116,6 +116,7 @@ p {
     color: white;
     cursor: pointer;
     transition: all 0.3s;
+  margin-right: 3px;
 }
 
 .btn:hover {
@@ -153,6 +154,11 @@ p {
     display: flex;
     margin-left: 10%;
 }
+
+.secundair {
+  margin-top: 10px;
+}
+
 
 .rect
 {
