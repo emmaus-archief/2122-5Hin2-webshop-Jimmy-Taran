@@ -46,6 +46,7 @@
             <ul class="product-properties">
             <li><span class="product_price"></span></li>
               <li><span class="product_stock"></span></li>
+              <li>Keycaps: <span class="product_keycaps"></span></li>
             <li><span class="propert-name"></span><span class="product_code"></span></li>
             </ul>
             <p class="product_description card-text"></p>
@@ -91,6 +92,7 @@
                 clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
                 clone.querySelector(".product_code").textContent = product.code
                 clone.querySelector(".product_stock").textContent = product.stock
+              clone.querySelector(".product_keycaps").textContent = product.keycaps
                 clone.querySelector(".product_id").value = product.id
                 clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
                 clone.querySelector(".product_image").src =`/images/${product.id}.png`
