@@ -102,6 +102,10 @@ p {
   color: #d0d0d0;
 }
 
+.btn.focus, .btn:focus {
+  box-shadow: none;
+}
+
 .btn {
     font-family: 'Montserrat';
     font-size: 15px;
