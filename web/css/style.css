@@ -22,7 +22,17 @@ footer {
   margin-right: 15px;
 }
 
+a {
+  text-decoration: none;
+}
 
+.navbarstyling {
+    color: white;
+    background: #0c0c0c;
+    padding: 10px;
+    font-family: 'Montserrat';
+    border-radius: 4px;
+}
 
 .toast-header {
   color: white;
@@ -176,6 +186,12 @@ h5 {
   transition: all 0.3s
 }
 
+#winkelwagen {
+  background: #0c0c0c;
+  border-radius: 3px;
+  border-bottom: 2px solid #3fd73f;
+}
+
 .product_image  {
   background: black;
 }
@@ -251,6 +267,16 @@ a {
   font-family: 'Montserrat';
   font-weight: 600;
   color: black;
+}
+
+.btn {
+  color: white;
+  transition: all 0.4;s
+}
+
+.btn:hover {
+  color: #2ddf5c;
+  transition: all 0.4;s
 }
 
 .btn-outline-dark:hover {

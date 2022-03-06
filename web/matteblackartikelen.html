@@ -31,15 +31,14 @@
       </button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+			<ul>
 				<li>
-					<a  class="navbarstyling" href="/">Home</span></a>
-          <a  class="navbarstyling"href="/matteblackartikelen.html">Matte black Keyboards</span></a>
-          <a  class="navbarstyling" href="/glossblackartikelen.html">Gloss black Keyboards</span></a>
+					<a href="/artikelen.html">All Keyboards</span></a>
+          <a href="/glossblackartikelen.html">Gloss black Keyboards</span></a>
 				</li>
 			</ul>
-			<a id="winkelwagen"
-				href="basket.html"><button class="btn my-2 my-sm-0" type="submit">Winkelwagen <span class="num_products"></span></button></a>
+			<a
+				href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img class="kart" src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-shopping-cart-interface-kiranshastry-lineal-kiranshastry-1.png"/> <span class="num_products"></span></button></a>
 		</div>
 	</nav>
 
@@ -84,7 +83,7 @@
         // laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
         var request = new XMLHttpRequest()
-        request.open('GET', '/api/products', true) 
+        request.open('GET', '/api/getMatteBlackProducts', true) 
         request.onload = showProducts 
         request.send() 
 
