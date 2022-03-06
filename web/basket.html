@@ -10,7 +10,7 @@
 
 
     <body>
-        <div class="header">
+        <div class="header" id="headindex">
                 
                 <h1>Slangy</h1><p class="totaal" id="totalcolor">Totaal bedrag: € <span class="totaal sum_products">0.00</span></p>
         <div class="rowflex">
@@ -44,17 +44,15 @@
               </div>
 
                </div>
-            
-              <!-- input field needed as parameter for + and - -->
                 
               <input class="product_amount" name="deltaAmount" value="1" type="hidden">
-              <!-- input field needed for checkout -->
               <input class="product_id" name="productIds" data-json="" type="hidden">
-              <!-- input field needed for checkout -->
               <input class="product_totalAmount" name="productAmounts" value="9" type="hidden">
-              <button class="btn secundair" onClick="addAmountClosestToBasket(this, '.product_amount_show')">+</button>
-              <button class="btn secundair" onClick="removeAmountClosestFromBasket(this, '.product_amount_show')">-</button>
-              <button class="btn secundair" onClick="if(confirm('Verwijder product?')) { removeClosestCompletelyFromBasket(this); setIfEmptyMsg() }">🗑</button>
+            
+<button class="btn secundair" onClick="addAmountClosestToBasket(this, '.product_amount_show')">+</button>
+<button class="btn secundair" onClick="removeAmountClosestFromBasket(this, '.product_amount_show')">-</button>
+<button class="btn secundair" onClick="if(confirm('Verwijder product?')) { removeFromBasket(this); setIfEmptyMsg() }">x</button>
+            
            
           </div>
           </template>
@@ -137,7 +135,21 @@
         </form>
   </div>
             </div>
-
+        <div class="container" id="checkout_status">
+             <template id="checkout_success">
+               <div class="alert alert-success"> 
+                 Je bestelling is geplaatst en een bevestigingsmail is verzonden.<br>
+                 Je ordernummer is <span class="checkout_ordernumber"></span> 
+               </div>
+             </template>
+             <template id="checkout_failes">
+               <div class="alert alert-danger">
+                 Je bestelling kon niet worden geplaatst, neem contact op met de Simo.Co.Verkoop@gmail.com<br>
+                 Foutmelding:<br>
+                 <span class="checkout_error_message"></span>
+               </div>
+             </template>
+        </div>
         </div>
  <script src="/js/basket.js"></script>
     <script> // script to show basket when page is loaded

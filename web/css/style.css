@@ -5,6 +5,38 @@ body {
   background: #080b0b;
   color: rgb(112, 112, 112);
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(34, 164, 12); 
+    border-radius: 10px;
+  }
+
+
+::selection {
+    background-color: #3d3d3d;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show>.btn-outline-dark.dropdown-toggle {
+  border-color: none;
+  background-color: #0e8100;
+  color: white;
+  transition: all 0.4s;
+}
+
+
+
+.btn-outline-dark {
+    transition: all 0.4s;
+}
+
+.btn {
+  font-family: 'Montserrat';
+}
+
 footer {
   margin: 20px;
   font-size: 12px;
@@ -32,6 +64,7 @@ a {
     padding: 10px;
     font-family: 'Montserrat';
     border-radius: 4px;
+  margin: 5px;
 }
 
 .toast-header {
@@ -41,6 +74,13 @@ a {
 
 .shop-button {
   font-size: 15px;
+}
+
+a:hover {
+  color: #5aff4f;
+  text-decoration: none;
+  transition: all 0.4s;
+    
 }
 
 .article-container {
@@ -217,6 +257,7 @@ h5 {
 
 a {
   color: #47ff3d;
+  
 }
 
 .mr-auto {
@@ -295,6 +336,18 @@ a {
         outline: none;
     }
 
+.navbar-light .navbar-toggler {
+  background: green;
+  border: none;
+}
+
+.navbar-collapse {
+  margin: 20px;
+}
+button:focus {
+  outline: none;
+}
+
 #hstyling {
   padding-bottom: 0px;
 }
@@ -315,4 +368,47 @@ a {
   padding-left: 20px;
   font-size: 13px;
   padding-left: 20px;
+}
+
+
+@media screen and (max-width: 532px) {
+  .card {
+    width: 90%;
+    margin: auto;
+  }
+.article-container {
+    max-width: 100%;
+  }
+}
+
+.btn-outline-dark:hover {
+  border-color: none;
+  background-color: #0e8100;
+  color: white;
+  transition: all 0.4s;
+}
+
+@media screen and (max-width: 860px) {
+  .productcontainer {
+    flex-direction: column;
+  }
+  .product_image {
+    max-width: 100%;
+  }
+  .col-sm {
+    margin-bottom: 20px;
+  }
+
+  li a {
+    display:block;
+  }
+
+  #winkelwagen {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .mr-auto {
+    margin-bottom: 20px;
+  }
 }

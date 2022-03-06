@@ -17,21 +17,22 @@
         Ga naar je <a href="/basket.html">Winkelwagen</a> om af te rekenen
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">Shop</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="/"><img id="slangy" src="https://i.ibb.co/VNcLdSP/Untitled-Artwork.jpg"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Artikelen <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        <a href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_products"></span></button></a>
-      </div>
-    </nav>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li>
+					<a  class="navbarstyling" href="/artikelen.html">Go back</span></a>
+				</li>
+			</ul>
+			<a id="winkelwagen"
+				href="basket.html"><button class="btn my-2 my-sm-0" type="submit">Winkelwagen <span class="num_products"></span></button></a>
+		</div>
+	</nav>
     <main id="index">
     </main>
     <footer>
@@ -77,15 +78,18 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('productId');
-
+        const productColor = urlParams.get('productColor')
+        var url = `/api/products/${productId}`;
+        
         var request = new XMLHttpRequest()
-        request.open('GET', `/api/products/${productId}`, true)
+        request.open('GET', url, true)
         request.onload = function () {
             var product = JSON.parse(this.response)
             if (request.status >= 200 && request.status < 400) {
                 const clone = template.content.cloneNode(true);
                 clone.querySelector(".product_title").textContent += product.name 
-                clone.querySelector(".product_color").textContent = `${product.colors}`
+                //clone.querySelector(".product_color").textContent = `${product.colors}`
+                clone.querySelector(".product_color").textContent = `${productColor}`
                 clone.querySelector(".product_description").textContent = product.description
                 clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
                 clone.querySelector(".product_code").textContent = product.code

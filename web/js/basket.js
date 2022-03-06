@@ -46,8 +46,10 @@ function addAmountClosestToBasket(el, showDivQry){
 
 function openArticlePage(el) {
   const product_id = getChild(el, '.product_id').value
+  const product_color = el.querySelector(".product_color").textContent
+  //const product_color = getChild(el, '.product_color').value
   console.log(getClosest(el, '.product_id'))
-  window.location = `/product.html?productId=${product_id}`
+  window.location = `/product.html?productId=${product_id}&productColor=${product_color}`
 }
 
 function emptyBasket() {

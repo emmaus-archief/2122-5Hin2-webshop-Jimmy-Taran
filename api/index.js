@@ -31,6 +31,7 @@ app.get('/api/products', getProducts)
 app.get('/api/getGlossBlackProducts', getGlossBlackProducts)
 app.get('/api/getMatteBlackProducts', getMatteBlackProducts)
 app.get('/api/products/:id', getProductById)
+app.get('/api/products/:id/:colorId', getProductByIdAndColor)
 app.post('/api/checkout', checkoutOrder)
 
 // start de server!
@@ -104,6 +105,16 @@ function getProductById(request, response) {
   const product_id = parseInt(request.params.id)
   const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, stock.stockinfo AS stock, keycaps.keysort AS keycaps, colors.kleur AS colors, deliverytimes.delivery AS deliverytime FROM products JOIN color_product ON products.id = color_product.item_id INNER JOIN colors ON colors.id = color_product.kleur_id INNER JOIN keycaps ON keycaps.id = products.keycaps_id INNER JOIN deliverytimes ON deliverytimes.id = products.deliverytimes_id INNER JOIN stock ON stock.id = products.stock_id WHERE products.id = ?')
   data = sqlOpdracht.all(product_id)
+  response.status(200).json(data[0])
+}
+
+function getProductByIdAndColor(request, response) {
+  console.log('API ontvangt /api/products/:id/:colorId', request.query)
+  let data = []
+  const product_id = parseInt(request.params.id)
+  const color_id = parseInt(request.params.colorId)
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, stock.stockinfo AS stock, keycaps.keysort AS keycaps, colors.kleur AS colors, deliverytimes.delivery AS deliverytime FROM products JOIN color_product ON products.id = color_product.item_id INNER JOIN colors ON colors.id = color_product.kleur_id INNER JOIN keycaps ON keycaps.id = products.keycaps_id INNER JOIN deliverytimes ON deliverytimes.id = products.deliverytimes_id INNER JOIN stock ON stock.id = products.stock_id WHERE products.id = ? AND products.colors_id = ?')
+  data = sqlOpdracht.all(product_id, color_id)
   response.status(200).json(data[0])
 }
 

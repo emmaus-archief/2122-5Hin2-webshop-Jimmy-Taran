@@ -21,6 +21,10 @@ body {
     background-color: #3d3d3d;
 }
 
+.btn.focus, .btn:focus {
+  box-shadow: none;
+}
+
 h1, h4 {
     font-family: 'Poppins';
     margin: 0;

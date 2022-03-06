@@ -25,7 +25,7 @@
 
   <!-- menubalk -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#"><img id="slangy" src="https://i.ibb.co/VNcLdSP/Untitled-Artwork.jpg"></a>
+		<a class="navbar-brand" href="/"><img id="slangy" src="https://i.ibb.co/VNcLdSP/Untitled-Artwork.jpg"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -108,7 +108,6 @@
       // vertaal response van API naar array met producten
             for (let row in data) { // herhaal voor elke product
               const product = data[row]
-              
               var name = product.name.substr(0, 35)
               if(name.length < product.name.length) {
                 name = name + '...'
