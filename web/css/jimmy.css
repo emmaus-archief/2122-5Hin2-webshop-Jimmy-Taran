@@ -12,7 +12,7 @@ body {
   }
   
   ::-webkit-scrollbar-thumb {
-    background: rgb(180, 180, 180); 
+    background: rgb(34, 164, 12); 
     border-radius: 10px;
   }
 
@@ -30,6 +30,7 @@ h1, h4 {
     margin: 0;
     font-weight: 500;
 }
+
 
 h1 {
     padding-top: 40px;
@@ -199,6 +200,10 @@ p {
 .rect:hover {
     transform: scale(1.1);
     transition: all 0.5s;
+}
+
+a.btn {
+  margin: 5px;
 }
 
 

@@ -27,10 +27,17 @@ body {
   transition: all 0.4s;
 }
 
+.toast.show {
+  z-index: 2;
+}
 
 
 .btn-outline-dark {
     transition: all 0.4s;
+}
+
+.btn.focus, .btn:focus {
+  box-shadow: none;
 }
 
 .btn {

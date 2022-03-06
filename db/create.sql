@@ -9,8 +9,8 @@ CREATE TABLE products (
   deliverytimes_id INTEGER,
   stock_id INTEGER
 );
-
-
+  
+  
   CREATE TABLE colors (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   kleur TEXT

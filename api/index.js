@@ -26,7 +26,6 @@ app.use(express.static('../web'))
 
 // definieer startpunten voor de API-server
 app.get('/api/echo', echoRequest)
-app.get('/api/categories', getCategories)
 app.get('/api/products', getProducts)
 app.get('/api/getGlossBlackProducts', getGlossBlackProducts)
 app.get('/api/getMatteBlackProducts', getMatteBlackProducts)
@@ -52,15 +51,6 @@ function echoRequest(request, response) {
   response.status(200).send(request.query)
 }
 
-function getCategories(request, response) {
-  console.log('API ontvangt /api/categories/')
-  // TODO: breid database uit zodat onderstaande query een lijstje categoriën levert.
-  const sqlOpdracht = db.prepare('SELECT categories.name AS category_name FROM categories ORDER BY id ASC')
-  const data = sqlOpdracht.all()
-  // console.log(JSON.stringify(data, null, 2))
-  response.status(200).send(data)
-  console.log('API verstuurt /api/categories/')
-}
 
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/', request.query)
@@ -69,7 +59,6 @@ const sqlOpdracht =
 db.prepare("SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, stock.stockinfo AS stock, keycaps.keysort AS keycaps, colors.kleur AS colors, deliverytimes.delivery AS deliverytime FROM products JOIN color_product ON products.id = color_product.item_id INNER JOIN colors ON colors.id = color_product.kleur_id INNER JOIN keycaps ON keycaps.id = products.keycaps_id INNER JOIN deliverytimes ON deliverytimes.id = products.deliverytimes_id INNER JOIN stock ON stock.id = products.stock_id ORDER BY products.id ASC")
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
-  console.log(data)
   response.status(200).send(data)
   console.log('API verstuurt /api/products/')
 }
@@ -81,7 +70,6 @@ const sqlOpdracht =
 db.prepare("SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, stock.stockinfo AS stock, keycaps.keysort AS keycaps, colors.kleur AS colors, deliverytimes.delivery AS deliverytime FROM products JOIN color_product ON products.id = color_product.item_id INNER JOIN colors ON colors.id = color_product.kleur_id INNER JOIN keycaps ON keycaps.id = products.keycaps_id INNER JOIN deliverytimes ON deliverytimes.id = products.deliverytimes_id INNER JOIN stock ON stock.id = products.stock_id WHERE colors.id = 2")
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
-  console.log(data)
   response.status(200).send(data)
   console.log('API verstuurt /api/products/')
 }
@@ -93,7 +81,6 @@ const sqlOpdracht =
 db.prepare("SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, stock.stockinfo AS stock, keycaps.keysort AS keycaps, colors.kleur AS colors, deliverytimes.delivery AS deliverytime FROM products JOIN color_product ON products.id = color_product.item_id INNER JOIN colors ON colors.id = color_product.kleur_id INNER JOIN keycaps ON keycaps.id = products.keycaps_id INNER JOIN deliverytimes ON deliverytimes.id = products.deliverytimes_id INNER JOIN stock ON stock.id = products.stock_id WHERE colors.id = 1")
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
-  console.log(data)
   response.status(200).send(data)
   console.log('API verstuurt /api/products/')
 }
@@ -181,13 +168,8 @@ const deleteProduct = (request, response) => {
 function checkoutOrder(request, response) {
   console.log("API ontvangt /api/checkout/")
 
-  // lees informatie die is meegestuurd naar api via POST-request
   var { name, adres, postcode, plaats, email, phone, productIds, productAmounts } = request.body
-  //console.log("data ontvangen via post-request:")
-  //console.log(request.body)
 
-  // define productIds and ProductAmounts as array 
-  // if there are 0 or 1 products this code is needed
   productIds = productIds || []
   if (!Array.isArray(productIds)) {
     productIds = [productIds]
