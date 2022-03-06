@@ -35,10 +35,6 @@
 	</nav>
     <main id="index">
     </main>
-    <footer>
-      <hr>
-       <p>Het maken van deze website is een opdracht voor het vak informatica op het Emmauscollege Rotterdam.</p>
-   </footer>
     <!-- template for product info-->
         <template id="productcard">
 
@@ -54,7 +50,7 @@
             </ul>
             <p class="product_description card-text"></p>
                     <div class="frogbox">
-                                              <button class="btn btn-outline-dark shop-button" onclick="event.stopPropagation();addAmountClosestToBasket(this);$('.toast').toast('show')">TOEVOEGEN AAN WINKELWAGEN</button>
+<button class="btn btn-outline-dark shop-button" onclick="event.stopPropagation();addAmountClosestToBasket(this);$('.toast').toast('show')">TOEVOEGEN AAN WINKELWAGEN</button>
             
             <input class="product_amount" type="number" value="1" min="1">
             <input class="product_id" type="hidden" name="id" data-json="">
@@ -85,6 +81,7 @@
         request.open('GET', url, true)
         request.onload = function () {
             var product = JSON.parse(this.response)
+          
             if (request.status >= 200 && request.status < 400) {
                 const clone = template.content.cloneNode(true);
                 clone.querySelector(".product_title").textContent += product.name 

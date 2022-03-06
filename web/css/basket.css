@@ -316,3 +316,30 @@ label {
 
 
 
+@media screen and (max-width: 600px) {
+    .card {
+        flex-direction: column;
+    }
+
+  .welcome{
+    width: 100%;
+  }
+
+  .jimmy-flexbox {
+    margin: auto;
+  }
+
+  #bestellen {
+    margin-top: 10px;
+  }
+
+  #winkelwagenlegen {
+    margin-top: 10px;
+  }
+
+  a.shop-button {
+    margin-top: 10px;
+  }
+
+
+}

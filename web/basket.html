@@ -51,7 +51,7 @@
             
 <button class="btn secundair" onClick="addAmountClosestToBasket(this, '.product_amount_show')">+</button>
 <button class="btn secundair" onClick="removeAmountClosestFromBasket(this, '.product_amount_show')">-</button>
-<button class="btn secundair" onClick="if(confirm('Verwijder product?')) { removeFromBasket(this); setIfEmptyMsg() }">x</button>
+<button class="btn secundair" onClick="if(confirm('Verwijder product?')) { removeClosestCompletelyFromBasket(this); setIfEmptyMsg() }">x</button>
             
            
           </div>
