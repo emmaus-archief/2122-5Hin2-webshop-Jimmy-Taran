@@ -14,9 +14,16 @@ CREATE TABLE products (
   stock_id INTEGER
 );
 
+
   CREATE TABLE colors (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  color TEXT
+  kleur TEXT
+  );
+
+  CREATE TABLE cp (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  item_id INTEGER,
+  kleur_id INTEGER
   );
 
   CREATE TABLE keycaps (
@@ -43,29 +50,45 @@ CREATE TABLE products (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ORNATA V2', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 2, 1, 2, 1);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ORNATA V2', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 1, 2, 1);
   
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY CYNOSA V2', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 2, 1, 2, 2);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY CYNOSA V2', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 1, 2, 2);
   
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TARTARUS', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TARTARUS', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 1, 2, 3);
 
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY VIPER V1', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 2, 1, 2, 1);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY VIPER V1', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 1, 2, 1);
   
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ADDER', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 2, 1, 2, 2);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY ADDER', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 1, 2, 2);
   
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TITANOBOA', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TITANOBOA', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 1, 2, 3);
 
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY MAMBA', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 2, 1, 2, 1);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY MAMBA', 'Mecha-membrane keyboard with Slangy Chroma RGB', '816905633-0', 10.5, 1, 2, 1);
   
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY COBRA', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11, 2, 1, 2, 2);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY COBRA', 'Membrane Gaming Keyboard with Razer Chroma RGB', '077030122-3', 11,  1, 2, 2);
   
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TAIPAN', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY TAIPAN', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 1, 2, 3);
   
-insert into products (name, description, code, price, colors_id, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY KRAIT', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 2, 1, 2, 3);
+insert into products (name, description, code, price, keycaps_id, deliverytimes_id, stock_id) values ('SLANGY KRAIT', 'Specialized gaming keypads with 32 fully programmable keys that are engineered to perfectly fit your hand for ultimate control.', '445924201-X', 13.5, 1, 2, 3);
   
-insert into colors (color) values ('MATTE BLACK');
-insert into colors (color) values ('GLOSS BLACK');
+insert into colors (kleur) values ('MATTE BLACK');
+insert into colors (kleur) values ('GLOSS BLACK');
 
+INSERT INTO cp (item_id, kleur_id) values (1, 1);
+INSERT INTO cp (item_id, kleur_id) values (1, 1);
+  INSERT INTO cp (item_id, kleur_id) values (2, 1);
+  INSERT INTO cp (item_id, kleur_id) values (3, 1);
+  INSERT INTO cp (item_id, kleur_id) values (3, 2);
+  INSERT INTO cp (item_id, kleur_id) values (4, 1);
+  INSERT INTO cp (item_id, kleur_id) values (4, 2);
+  INSERT INTO cp (item_id, kleur_id) values (5, 2);
+  INSERT INTO cp (item_id, kleur_id) values (6, 1);
+  INSERT INTO cp (item_id, kleur_id) values (7, 2);
+  INSERT INTO cp (item_id, kleur_id) values (8, 1);
+  INSERT INTO cp (item_id, kleur_id) values (9, 1);
+  INSERT INTO cp (item_id, kleur_id) values (9, 2);
+INSERT INTO cp (item_id, kleur_id) values (10, 1);
+  
+  
 insert into keycaps (keysort) values ('Soft');
 insert into keycaps (keysort) values ('Medium');
 insert into keycaps (keysort) values ('Hard');
