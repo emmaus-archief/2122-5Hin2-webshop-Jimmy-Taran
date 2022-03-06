@@ -106,6 +106,7 @@
       // vertaal response van API naar array met producten
             for (let row in data) { // herhaal voor elke product
               const product = data[row]
+              
               var name = product.name.substr(0, 35)
               if(name.length < product.name.length) {
                 name = name + '...'
@@ -121,6 +122,8 @@
               clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
               clone.querySelector(".product_image").src =`/images/${product.id}.png`
               container.appendChild(clone)
+                console.log(data)
+              
             }
           }
 	</script>

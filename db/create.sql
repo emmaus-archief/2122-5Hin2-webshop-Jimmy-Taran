@@ -1,7 +1,3 @@
---
--- create tables
---
-
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   code VARCHAR(15),
@@ -20,7 +16,7 @@ CREATE TABLE products (
   kleur TEXT
   );
 
-  CREATE TABLE cp (
+  CREATE TABLE color_product (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   item_id INTEGER,
   kleur_id INTEGER
@@ -73,20 +69,20 @@ insert into products (name, description, code, price, keycaps_id, deliverytimes_
 insert into colors (kleur) values ('MATTE BLACK');
 insert into colors (kleur) values ('GLOSS BLACK');
 
-INSERT INTO cp (item_id, kleur_id) values (1, 1);
-INSERT INTO cp (item_id, kleur_id) values (1, 1);
-  INSERT INTO cp (item_id, kleur_id) values (2, 1);
-  INSERT INTO cp (item_id, kleur_id) values (3, 1);
-  INSERT INTO cp (item_id, kleur_id) values (3, 2);
-  INSERT INTO cp (item_id, kleur_id) values (4, 1);
-  INSERT INTO cp (item_id, kleur_id) values (4, 2);
-  INSERT INTO cp (item_id, kleur_id) values (5, 2);
-  INSERT INTO cp (item_id, kleur_id) values (6, 1);
-  INSERT INTO cp (item_id, kleur_id) values (7, 2);
-  INSERT INTO cp (item_id, kleur_id) values (8, 1);
-  INSERT INTO cp (item_id, kleur_id) values (9, 1);
-  INSERT INTO cp (item_id, kleur_id) values (9, 2);
-INSERT INTO cp (item_id, kleur_id) values (10, 1);
+INSERT INTO color_product (item_id, kleur_id) values (1, 1);
+INSERT INTO color_product (item_id, kleur_id) values (1, 2);
+INSERT INTO color_product (item_id, kleur_id) values (2, 1);
+INSERT INTO color_product (item_id, kleur_id) values (3, 1);
+INSERT INTO color_product (item_id, kleur_id) values (3, 2);
+INSERT INTO color_product (item_id, kleur_id) values (4, 1);
+INSERT INTO color_product (item_id, kleur_id) values (4, 2);
+INSERT INTO color_product (item_id, kleur_id) values (5, 2);
+INSERT INTO color_product (item_id, kleur_id) values (6, 1);
+INSERT INTO color_product (item_id, kleur_id) values (7, 2);
+INSERT INTO color_product (item_id, kleur_id) values (8, 1);
+INSERT INTO color_product (item_id, kleur_id) values (9, 1);
+INSERT INTO color_product (item_id, kleur_id) values (9, 2);
+INSERT INTO color_product (item_id, kleur_id) values (10, 1);
   
   
 insert into keycaps (keysort) values ('Soft');

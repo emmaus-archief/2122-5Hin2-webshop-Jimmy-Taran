@@ -22,6 +22,8 @@ footer {
   margin-right: 15px;
 }
 
+
+
 .toast-header {
   color: white;
   background: green;
@@ -151,6 +153,14 @@ padding: 0;
 h5 {
   margin-bottom: 0;
 }
+
+
+
+
+.card-header {
+  padding-bottom: 0;
+}
+
 .hidethis {
   display: none;
 }
@@ -272,4 +282,11 @@ a {
   border: 2px solid #30ff3094;
   background: #141a1a;
   width: 300px;
+}
+
+.product_color {
+  color: #5f605f;
+  padding-left: 20px;
+  font-size: 13px;
+  padding-left: 20px;
 }

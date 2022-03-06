@@ -45,6 +45,7 @@
           <img class="product_image">
                   <div class="product-body">
             <h5 class="card-header product_title" id="hstyling"></h5>
+            <span class="product_color"></span>
             <ul class="product-properties">
             <li><span class="product_price"></span></li>
               <li><span class="product_stock"></span></li>
@@ -83,7 +84,8 @@
             var product = JSON.parse(this.response)
             if (request.status >= 200 && request.status < 400) {
                 const clone = template.content.cloneNode(true);
-                clone.querySelector(".product_title").textContent += product.name
+                clone.querySelector(".product_title").textContent += product.name 
+                clone.querySelector(".product_color").textContent = `${product.colors}`
                 clone.querySelector(".product_description").textContent = product.description
                 clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
                 clone.querySelector(".product_code").textContent = product.code
@@ -93,6 +95,10 @@
                 clone.querySelector(".product_image").src =`/images/${product.id}.png`
 
                 container.appendChild(clone)
+        
+            
+              
+              console.log(product)
             } else {
               const errorMessage = document.createElement('marquee')
               
